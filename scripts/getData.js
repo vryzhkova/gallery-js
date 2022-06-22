@@ -1,5 +1,5 @@
-export const getData = () => {
-    return fetch('data.json').then((data) => {
+export const getData = (url) => {
+    return fetch(url).then((data) => {
         return data.json();
-    })
+    });
 };

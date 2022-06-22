@@ -27,7 +27,6 @@ export const createCardPhoto = async (data) => {
     });
 
     const photo = await loadImg(data.urls.small, data.alt_sescription);
-    console.log(photo);
     const author = createElem('a', {
         className: 'card__author',
         href: data.user.links.html,
