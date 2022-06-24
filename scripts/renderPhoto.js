@@ -31,7 +31,7 @@ export const renderPhoto = (photoWrapper, photo) => {
         id: photo.id,
         className: 'photo__like',
         textContent: photo.likes,
-    });s
+    });
 
     if(!photolike.likedByUser) {
         photolike.classList.add('photo__like_o');
