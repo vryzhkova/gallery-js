@@ -6,4 +6,4 @@ export const ACCESS_KEY = '8cJklvLNtPWlXEhlpVzClczZvzmePPuSK4F3fmau1Lc';
 export const SECRET_KEY = 'GzA08Ox9PeZMC-kxlSZ6wedIg7_So9MAVjxHvcz9pr0';
 export const REDORECT_URI = 'http://127.0.0.1:5500/';	
 export const RESPONSE_TYPE = 'code';
-export const SCOPE = 'public read_photos write_likes';
+export const SCOPE = 'public read_user read_photos write_likes';

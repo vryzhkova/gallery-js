@@ -55,13 +55,22 @@ const login = () => {
     location.href = url;
 }
 
+const logout = (event) => {
+    const btn = event.target;
+    if(confirm('Вы уверены?')) {
+        localStorage.removeItem('Bearer');
+        btn.textContent = '';
+        btn.style.backgroundImage = '';
+    }
+};
+
 export const authorization = async (btn) => {
     if (await checkLogin()) {
         const dataUser = await getUserData();
-        console.log(dataUser);
+        btn.textContent = dataUser.username;
+        btn.style.backgroundImage = `url(${dataUser.profile_image.medium})`;
+        btn.addEventListener('click', logout);
     } else {
-        console.log('Не авторизован');
-
         btn.addEventListener('click', login);
     }
 };
