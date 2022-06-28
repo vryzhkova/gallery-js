@@ -4,7 +4,6 @@ export const handlerLike = (photoLike) => {
     const url = new URL(`${API_URL_PHOTOS}/${photoLike.id}/like`);
 
     const toggleLike = (data) => {
-        console.log(data);
         if(data.photo.liked_by_user) {
             photoLike.classList.remove('photo__like_o');
         } else {
@@ -20,6 +19,6 @@ export const handlerLike = (photoLike) => {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('Bearer')}`
             }
-        }).then(response => response => response.json())
+        }).then(response => response.json())
         .then(toggleLike);
 };
